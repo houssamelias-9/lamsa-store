@@ -1,0 +1,17 @@
+# قاعدة البيانات المحلية تحتوي حسابات حقيقية — لا تُرفع إلى GitHub
+/database.sql
+/database-hosting.sql
+*.sql
+!database.example.sql
+
+# ملفات المستخدمين المرفوعة
+/uploads/products/*
+!/uploads/products/.htaccess
+
+# ملفات النظام والمحرر
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+.idea/
+.vscode/

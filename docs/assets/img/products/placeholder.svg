@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 750" role="img" aria-label="لا توجد صورة للمنتج">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fbf7f1"/><stop offset="1" stop-color="#efe7db"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="750" fill="url(#bg)"/>
+  <circle cx="300" cy="340" r="190" fill="#fff" opacity=".7"/>
+  <g fill="none" stroke="#c9b8a3" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M232 306 L300 268 L368 306 L368 428 L300 466 L232 428 Z"/>
+    <path d="M232 306 L300 344 L368 306"/>
+    <path d="M300 344 L300 466"/>
+  </g>
+  <text x="300" y="548" text-anchor="middle" font-family="Cairo, Tahoma, Arial, sans-serif" font-size="30" font-weight="700" fill="#a9947c">لمسة</text>
+</svg>

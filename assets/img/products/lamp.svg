@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 750" role="img" aria-label="مصباح طاولة خشبي">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fdf8f0"/><stop offset="1" stop-color="#f1e5d3"/>
+    </linearGradient>
+    <linearGradient id="wood" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#a9764a"/><stop offset="1" stop-color="#7a4f2c"/>
+    </linearGradient>
+    <linearGradient id="shade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fdf6e8"/><stop offset="1" stop-color="#e8d5b5"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ffd98a" stop-opacity=".85"/>
+      <stop offset="100%" stop-color="#ffd98a" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#6b4a2a" flood-opacity=".22"/>
+    </filter>
+  </defs>
+  <rect width="600" height="750" fill="url(#bg)"/>
+  <circle cx="300" cy="350" r="210" fill="#fff" opacity=".55"/>
+  <circle cx="300" cy="330" r="190" fill="url(#glow)"/>
+  <circle cx="122" cy="584" r="8" fill="#a9764a" opacity=".2"/>
+  <circle cx="478" cy="176" r="6" fill="#a9764a" opacity=".22"/>
+  <g filter="url(#soft)">
+    <ellipse cx="300" cy="596" rx="96" ry="22" fill="url(#wood)"/>
+    <rect x="288" y="400" width="24" height="186" rx="12" fill="url(#wood)"/>
+    <path d="M214 250 L386 250 L344 400 L256 400 Z" fill="url(#shade)"/>
+    <path d="M214 250 Q300 232 386 250" fill="none" stroke="#cbb18c" stroke-width="5"/>
+    <path d="M256 400 Q300 410 344 400" fill="none" stroke="#cbb18c" stroke-width="5"/>
+    <path d="M236 300 Q300 314 364 300" fill="none" stroke="#dfc8a6" stroke-width="3"/>
+    <circle cx="300" cy="392" r="14" fill="#ffe3a3"/>
+    <circle cx="300" cy="392" r="26" fill="#ffd98a" opacity=".45"/>
+  </g>
+  <g stroke="#d8b57f" stroke-width="3" stroke-linecap="round" opacity=".6">
+    <path d="M196 232 L182 214"/><path d="M404 232 L418 214"/>
+    <path d="M300 222 L300 200"/>
+  </g>
+</svg>

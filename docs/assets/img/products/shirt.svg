@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 750" role="img" aria-label="قميص قطني كلاسيكي">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f7f9fc"/><stop offset="1" stop-color="#e5ecf4"/>
+    </linearGradient>
+    <linearGradient id="fabric" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f4f8fd"/><stop offset="1" stop-color="#c9d8e8"/>
+    </linearGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#3b5a7a" flood-opacity=".18"/>
+    </filter>
+  </defs>
+  <rect width="600" height="750" fill="url(#bg)"/>
+  <circle cx="300" cy="345" r="216" fill="#fff" opacity=".62"/>
+  <circle cx="116" cy="580" r="8" fill="#3b5a7a" opacity=".16"/>
+  <circle cx="486" cy="150" r="6" fill="#3b5a7a" opacity=".2"/>
+  <g filter="url(#soft)">
+    <path d="M250 192 L292 212 L308 212 L350 192 L392 214 L430 400 L378 416 L368 340 L364 500 Q300 516 236 500 L232 340 L222 416 L170 400 L208 214 Z" fill="url(#fabric)" stroke="#aebfce" stroke-width="2"/>
+    <path d="M292 212 L300 300 L308 212 L340 200 L310 340 L290 340 L260 200 Z" fill="#dce7f2" stroke="#aebfce" stroke-width="2"/>
+    <path d="M300 300 L300 508" stroke="#b6c7d6" stroke-width="3"/>
+    <g fill="#8fa6ba">
+      <circle cx="300" cy="336" r="3.4"/><circle cx="300" cy="378" r="3.4"/><circle cx="300" cy="420" r="3.4"/>
+      <circle cx="300" cy="462" r="3.4"/><circle cx="300" cy="496" r="3.4"/>
+    </g>
+    <rect x="326" y="330" width="40" height="46" rx="4" fill="none" stroke="#b6c7d6" stroke-width="2.5"/>
+  </g>
+</svg>

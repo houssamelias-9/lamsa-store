@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 750" role="img" aria-label="فستان صيفي بنقشة زهور">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fdf8f2"/><stop offset="1" stop-color="#f3e7da"/>
+    </linearGradient>
+    <linearGradient id="fabric" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f2547d"/><stop offset="1" stop-color="#c81e45"/>
+    </linearGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#8a2b45" flood-opacity=".22"/>
+    </filter>
+  </defs>
+  <rect width="600" height="750" fill="url(#bg)"/>
+  <circle cx="300" cy="330" r="215" fill="#fff" opacity=".6"/>
+  <circle cx="116" cy="152" r="7" fill="#e11d48" opacity=".18"/>
+  <circle cx="492" cy="592" r="10" fill="#e11d48" opacity=".14"/>
+  <circle cx="472" cy="146" r="5" fill="#e11d48" opacity=".2"/>
+  <g filter="url(#soft)">
+    <path d="M252 190 L348 190 L370 250 Q356 272 332 262 L328 336 L398 566 Q300 606 202 566 L272 336 L268 262 Q244 272 230 250 Z" fill="url(#fabric)"/>
+    <path d="M272 330 Q300 346 328 330 L332 362 Q300 378 268 362 Z" fill="#a8123a" opacity=".5"/>
+    <path d="M254 191 Q300 234 346 191" fill="none" stroke="#a8123a" stroke-width="6" opacity=".4"/>
+  </g>
+  <g fill="#fff" opacity=".55">
+    <circle cx="270" cy="430" r="6"/><circle cx="282" cy="422" r="6"/><circle cx="282" cy="438" r="6"/><circle cx="294" cy="430" r="6"/>
+    <circle cx="330" cy="492" r="6"/><circle cx="342" cy="484" r="6"/><circle cx="342" cy="500" r="6"/><circle cx="354" cy="492" r="6"/>
+    <circle cx="250" cy="522" r="6"/><circle cx="262" cy="514" r="6"/><circle cx="262" cy="530" r="6"/><circle cx="274" cy="522" r="6"/>
+  </g>
+  <g fill="#f7c948" opacity=".9">
+    <circle cx="282" cy="430" r="2.6"/><circle cx="342" cy="492" r="2.6"/><circle cx="262" cy="522" r="2.6"/>
+  </g>
+</svg>

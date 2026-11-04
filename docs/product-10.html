@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<style>
+  .lamsa-demo-bar{position:relative;z-index:9999;background:#201b15;color:#f8f2e9;font-family:Cairo,system-ui,sans-serif;font-size:13px;line-height:1.7;padding:9px 14px;text-align:center}
+  .lamsa-demo-bar strong{color:#ffd7a3}
+  .lamsa-demo-bar a{color:#ffd7a3;text-decoration:underline}
+  .lamsa-demo-toast{position:fixed;inset-inline:16px;bottom:18px;z-index:10000;margin:auto;max-width:520px;background:#201b15;color:#fff8ee;border-radius:14px;padding:14px 18px;font-family:Cairo,system-ui,sans-serif;font-size:13.5px;line-height:1.8;box-shadow:0 18px 45px rgba(0,0,0,.35);display:none}
+  .lamsa-demo-toast.is-open{display:block}
+  .lamsa-demo-toast button{margin-top:10px;border:0;border-radius:9px;background:#ffd7a3;color:#201b15;font:inherit;font-weight:700;padding:7px 14px;cursor:pointer}
+</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="لمسة — أناقة يومية بأسعار تناسبك. تسوّق أزياء وإلكترونيات ومستلزمات المنزل مع توصيل لكل المحافظات.">
+    <title>ساعة ذكية بشاشة AMOLED · لمسة</title>
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="lamsa-demo-bar" role="note">
+  <strong>نسخة عرض ثابتة على GitHub Pages.</strong>
+  التصفح يعمل، أما تسجيل الدخول والسلة والدفع فتحتاج تشغيل نسخة PHP على استضافة تدعم PHP وMySQL.
+</div>
+<div class="lamsa-demo-toast" id="lamsaDemoToast" role="status">
+  <div>هذه نسخة عرض ثابتة. تسجيل الدخول، إضافة للسلة، والدفع غير مفعّلة على GitHub Pages لأنها لا تشغّل PHP أو MySQL.</div>
+  <button type="button" onclick="document.getElementById('lamsaDemoToast').classList.remove('is-open')">حسناً</button>
+</div>
+<script>
+(function () {
+  function notify(message) {
+    var box = document.getElementById('lamsaDemoToast');
+    if (message) { box.firstElementChild.textContent = message; }
+    box.classList.add('is-open');
+  }
+  document.addEventListener('submit', function (event) {
+    event.preventDefault();
+    notify('هذه نسخة عرض ثابتة. تسجيل الدخول، إضافة للسلة، والدفع غير مفعّلة على GitHub Pages لأنها لا تشغّل PHP أو MySQL.');
+  }, true);
+  document.addEventListener('click', function (event) {
+    var link = event.target.closest('a');
+    if (!link) { return; }
+    var href = link.getAttribute('href') || '';
+    if (href === 'cart.html' || href === 'account.html' || href === 'login.html') {
+      event.preventDefault();
+      notify('هذا القسم يحتاج قاعدة بيانات وخادم PHP، وهو غير متاح في نسخة GitHub Pages الثابتة.');
+    }
+  }, true);
+})();
+</script>
+<a class="skip-link" href="#main">تخطَّ إلى المحتوى</a>
+
+<div class="topbar">
+    <div class="container topbar-inner">
+        <span class="topbar-item"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 7h11v10H3z"/><path d="M14 10h4l3 3v4h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="18" cy="18" r="1.6"/></svg> توصيل لجميع المحافظات خلال 1–3 أيام</span>
+        <span class="topbar-item topbar-item--accent"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/><path d="m6.3 6.3 2.8 2.8M14.9 14.9l2.8 2.8M17.7 6.3l-2.8 2.8M9.1 14.9l-2.8 2.8"/></svg> شحن مجاني للطلبات فوق 50 د.أ</span>
+    </div>
+</div>
+
+<header class="site-header">
+    <div class="container header-main">
+        <a class="brand" href="index.html" aria-label="لمسة — الصفحة الرئيسية">
+            <span class="brand-mark">ل</span>
+            <span class="brand-copy">
+                <span class="brand-name">لمسة<span class="brand-dot">.</span></span>
+                <span class="brand-tagline">أناقة يومية بأسعار تناسبك</span>
+            </span>
+        </a>
+
+        <form class="search" role="search" action="index.html" method="get">
+            <label class="sr-only" for="site-search">البحث في المنتجات</label>
+            <input id="site-search" type="search" name="q" value=""
+                   placeholder="ابحث عن فستان، حقيبة، سماعات..." autocomplete="off">
+            <button class="search-btn" type="submit" aria-label="بحث"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg></button>
+        </form>
+
+        <div class="header-actions">
+                            <a class="btn btn-ghost btn-sm header-auth" href="login.html">دخول</a>
+                <a class="btn btn-dark btn-sm header-auth" href="register.html">إنشاء حساب</a>
+            
+            <a class="icon-btn icon-btn--stacked cart-btn"
+               href="cart.html" aria-label="سلة التسوق">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M3 3h2l2.4 11.2a2 2 0 0 0 2 1.6h8.7a2 2 0 0 0 2-1.6L22 8H6"/></svg>                <span class="cart-count is-empty">0</span>
+                <span class="icon-btn-label">السلة</span>
+            </a>
+        </div>
+    </div>
+
+    <nav class="cat-nav" aria-label="أقسام المتجر">
+        <div class="container cat-nav-inner">
+            <a class="cat-link"
+               href="index.html"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/><path d="m6.3 6.3 2.8 2.8M14.9 14.9l2.8 2.8M17.7 6.3l-2.8 2.8M9.1 14.9l-2.8 2.8"/></svg> كل المنتجات</a>
+                            <a class="cat-link"
+                   href="category-women.html">
+                    <span class="cat-emoji" aria-hidden="true">👗</span>نساء                </a>
+                            <a class="cat-link"
+                   href="category-men.html">
+                    <span class="cat-emoji" aria-hidden="true">👔</span>رجال                </a>
+                            <a class="cat-link"
+                   href="category-kids.html">
+                    <span class="cat-emoji" aria-hidden="true">🧸</span>أطفال                </a>
+                            <a class="cat-link is-active"
+                   href="category-electronics.html">
+                    <span class="cat-emoji" aria-hidden="true">🎧</span>إلكترونيات                </a>
+                            <a class="cat-link"
+                   href="category-home.html">
+                    <span class="cat-emoji" aria-hidden="true">🛋️</span>المنزل                </a>
+                            <a class="cat-link"
+                   href="category-beauty.html">
+                    <span class="cat-emoji" aria-hidden="true">💄</span>جمال                </a>
+                        <a class="cat-link cat-link--sale" href="offers.html">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.6 13.4 12 22l-9-9V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg> عروض
+            </a>
+        </div>
+    </nav>
+</header>
+
+<main id="main">
+    
+<div class="container">
+    <nav class="breadcrumb" aria-label="مسار التنقل">
+        <a href="index.html">الرئيسية</a>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5"/><path d="m11 6-6 6 6 6"/></svg>        <a href="category-electronics.html">إلكترونيات</a>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5"/><path d="m11 6-6 6 6 6"/></svg>        <span>ساعة ذكية بشاشة AMOLED</span>
+    </nav>
+
+    <div class="product-detail">
+        <div class="gallery">
+            <div class="gallery-main">
+                                    <span class="badge badge-sale gallery-badge">خصم 20%</span>
+                                <button type="button" class="zoomable" data-full="/assets/img/products/watch.svg" aria-label="تكبير الصورة">
+                    <img src="assets/img/products/watch.svg" alt="ساعة ذكية بشاشة AMOLED" width="600" height="750">
+                </button>
+                <span class="gallery-hint"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg> اضغط لتكبير الصورة</span>
+            </div>
+        </div>
+
+        <div class="detail-info">
+            <a class="product-cat" href="category-electronics.html">
+                إلكترونيات            </a>
+            <h1 class="detail-title">ساعة ذكية بشاشة AMOLED</h1>
+
+            <div class="detail-rating">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/><path d="m6.3 6.3 2.8 2.8M14.9 14.9l2.8 2.8M17.7 6.3l-2.8 2.8M9.1 14.9l-2.8 2.8"/></svg>                <span>قطعة مختارة بعناية من تشكيلة لمسة</span>
+            </div>
+
+            <div class="detail-price">
+                <strong>79.00 <span class="cur">د.أ</span></strong>
+                                    <del>99.00 <span class="cur">د.أ</span></del>
+                    <span class="save-tag">توفير 20.00 <span class="cur">د.أ</span></span>
+                            </div>
+            <p class="tax-note">السعر شامل الضرائب — يُحسب الشحن عند إتمام الطلب.</p>
+
+            <p class="detail-desc">ساعة ذكية بشاشة AMOLED واضحة وتتبع للنشاط ونبضات القلب والنوم. مقاومة للماء وبطارية تدوم حتى 7 أيام، مع إشعارات الهاتف.</p>
+
+            <div class="stock-line is-in">
+                <span class="stock-dot"></span>
+                                    متوفر في المخزون — جاهز للشحن
+                            </div>
+
+                            <form method="post" action="cart.html" class="buy-form">
+                    <input type="hidden" name="_token" value="53d3331f362a686d69c8dfb24efd9231d0e247a29103d13cba84952f43f8e9ed">                    <input type="hidden" name="action" value="add">
+                    <input type="hidden" name="product_id" value="10">
+                    <input type="hidden" name="back" value="product.php?id=10">
+
+                    <div class="buy-row">
+                        <div class="qty-stepper" data-max="10">
+                            <button type="button" class="qty-btn" data-qty="-1" aria-label="تقليل الكمية"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/></svg></button>
+                            <label class="sr-only" for="qty">الكمية</label>
+                            <input id="qty" type="number" name="qty" value="1" min="1" max="10" inputmode="numeric">
+                            <button type="button" class="qty-btn" data-qty="1" aria-label="زيادة الكمية"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></button>
+                        </div>
+                        <button type="submit" name="go" value="add" class="btn btn-dark btn-lg buy-btn"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M3 3h2l2.4 11.2a2 2 0 0 0 2 1.6h8.7a2 2 0 0 0 2-1.6L22 8H6"/></svg> أضف للسلة</button>
+                    </div>
+                    <button type="submit" name="go" value="checkout" class="btn btn-accent btn-lg btn-block">اشترِ الآن</button>
+                </form>
+            
+            <ul class="detail-perks">
+                <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 7h11v10H3z"/><path d="M14 10h4l3 3v4h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="18" cy="18" r="1.6"/></svg><div><strong>توصيل سريع</strong><span>1–3 أيام عمل لكل المحافظات</span></div></li>
+                <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg><div><strong>إرجاع مجاني</strong><span>خلال 14 يوماً من الاستلام</span></div></li>
+                <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22s8-3.5 8-10V5l-8-3-8 3v7c0 6.5 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><div><strong>دفع آمن</strong><span>عند الاستلام أو بتحويل بنكي</span></div></li>
+            </ul>
+
+            <div class="accordion">
+                <details open>
+                    <summary>تفاصيل المنتج</summary>
+                    <div class="accordion-body">
+                        <ul class="detail-list">
+                            <li><span>القسم</span><strong>إلكترونيات</strong></li>
+                            <li><span>رمز المنتج</span><strong dir="ltr">LM-00010</strong></li>
+                            <li><span>التوفر</span><strong>متوفر</strong></li>
+                            <li><span>الضمان</span><strong>فحص الجودة قبل الشحن</strong></li>
+                        </ul>
+                    </div>
+                </details>
+                <details>
+                    <summary>الشحن والإرجاع</summary>
+                    <div class="accordion-body">
+                        <p>نوصل لجميع محافظات المملكة خلال 1–3 أيام عمل. الشحن مجاني للطلبات فوق
+                            50 د.أ، وإلا تُضاف رسوم
+                            2.00 <span class="cur">د.أ</span> فقط.</p>
+                        <p>يمكنك إرجاع المنتج خلال 14 يوماً بشرط أن يكون بحالته الأصلية وبكامل تغليفه.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </div>
+
+            <section class="section">
+            <div class="section-head">
+                <div>
+                    <span class="eyebrow">قد يعجبك أيضاً</span>
+                    <h2>منتجات مشابهة</h2>
+                </div>
+                <a class="link-more" href="category-electronics.html">
+                    كل قسم إلكترونيات <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5"/><path d="m11 6-6 6 6 6"/></svg>                </a>
+            </div>
+            <div class="product-grid product-grid--related">
+                                                        <article class="product-card">
+    <div class="product-media">
+        <a href="product-9.html" aria-label="سماعات لاسلكية حول الأذن">
+            <img src="assets/img/products/headphones.svg" alt="سماعات لاسلكية حول الأذن" loading="lazy" width="600" height="750">
+        </a>
+
+        <div class="product-badges">
+                            <span class="badge badge-sale">خصم 34%</span>
+                                </div>
+
+                    <form method="post" action="cart.html" class="quick-add-form">
+                <input type="hidden" name="_token" value="53d3331f362a686d69c8dfb24efd9231d0e247a29103d13cba84952f43f8e9ed">                <input type="hidden" name="action" value="add">
+                <input type="hidden" name="product_id" value="9">
+                <input type="hidden" name="qty" value="1">
+                <input type="hidden" name="back" value="product.php?id=10">
+                <button type="submit" class="quick-add"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M3 3h2l2.4 11.2a2 2 0 0 0 2 1.6h8.7a2 2 0 0 0 2-1.6L22 8H6"/></svg> أضف للسلة</button>
+            </form>
+            </div>
+
+    <div class="product-body">
+        <span class="product-cat">إلكترونيات</span>
+        <h3 class="product-title">
+            <a href="product-9.html">سماعات لاسلكية حول الأذن</a>
+        </h3>
+        <div class="product-price">
+            <strong>59.00 <span class="cur">د.أ</span></strong>
+                            <del>89.00 <span class="cur">د.أ</span></del>
+                    </div>
+    </div>
+</article>
+                            </div>
+        </section>
+    </div>
+
+    </main>
+
+    <div class="container">
+        <footer class="site-footer">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a class="brand brand--footer" href="index.html">
+                        <span class="brand-mark">ل</span>
+                        <span class="brand-copy">
+                            <span class="brand-name">لمسة<span class="brand-dot">.</span></span>
+                            <span class="brand-tagline">أناقة يومية بأسعار تناسبك</span>
+                        </span>
+                    </a>
+                    <p>متجرك العربي للأزياء والإلكترونيات ومستلزمات المنزل. جودة مختارة بعناية وأسعار تناسب ميزانيتك.</p>
+                    <div class="footer-badges">
+                        <span class="pill"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22s8-3.5 8-10V5l-8-3-8 3v7c0 6.5 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg> دفع آمن</span>
+                        <span class="pill"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg> إرجاع خلال 14 يوم</span>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="newest.html">وصل حديثاً</a></li>
+                        <li><a href="offers.html">العروض والتخفيضات</a></li>
+                        <li><a href="cart.html">سلة التسوق</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>حسابك</h3>
+                    <ul>
+                                                    <li><a href="login.html">تسجيل الدخول</a></li>
+                            <li><a href="register.html">إنشاء حساب جديد</a></li>
+                                                <li><a href="cart.html">متابعة التسوق</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>تواصل معنا</h3>
+                    <ul class="footer-contact">
+                        <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg> <span dir="ltr">+962 79 000 0000</span></li>
+                        <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg> <span dir="ltr">hello@lamsa.com</span></li>
+                        <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> عمّان، الأردن</li>
+                        <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> السبت – الخميس، 9 ص – 6 م</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>© 2026 لمسة — جميع الحقوق محفوظة.</span>
+                <span class="footer-payments">
+                    <span class="pay-chip">الدفع عند الاستلام</span>
+                    <span class="pay-chip">تحويل بنكي</span>
+                </span>
+            </div>
+        </footer>
+    </div>
+
+<div class="lightbox" id="lightbox" hidden>
+    <button type="button" class="lightbox-close" aria-label="إغلاق"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    <img src="" alt="">
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

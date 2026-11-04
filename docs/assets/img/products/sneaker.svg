@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 750" role="img" aria-label="حذاء رياضي خفيف">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fbf8f4"/><stop offset="1" stop-color="#efe6db"/>
+    </linearGradient>
+    <linearGradient id="upper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e7e1d9"/>
+    </linearGradient>
+    <linearGradient id="sole" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#e11d48"/><stop offset="1" stop-color="#9f1239"/>
+    </linearGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="20" stdDeviation="18" flood-color="#5a3a3a" flood-opacity=".22"/>
+    </filter>
+  </defs>
+  <rect width="600" height="750" fill="url(#bg)"/>
+  <circle cx="300" cy="380" r="205" fill="#fff" opacity=".62"/>
+  <circle cx="128" cy="560" r="8" fill="#e11d48" opacity=".16"/>
+  <circle cx="478" cy="196" r="7" fill="#e11d48" opacity=".18"/>
+  <g filter="url(#soft)" transform="rotate(-8 300 420)">
+    <path d="M150 470 Q150 402 214 392 Q262 384 300 344 Q330 312 368 322 L386 386 Q440 402 462 436 Q474 456 462 474 L150 486 Z" fill="url(#upper)" stroke="#cfc7bd" stroke-width="2"/>
+    <path d="M150 470 Q300 490 462 474 L468 502 Q310 528 144 502 Z" fill="url(#sole)"/>
+    <path d="M144 502 Q310 528 468 502 L470 516 Q312 544 142 516 Z" fill="#f4f0ea"/>
+    <path d="M310 344 Q344 372 372 392" fill="none" stroke="#d8d0c6" stroke-width="3"/>
+    <g stroke="#b8b0a6" stroke-width="5" stroke-linecap="round">
+      <path d="M318 356 L370 336"/><path d="M330 374 L384 352"/><path d="M344 392 L398 368"/>
+    </g>
+    <path d="M238 386 Q274 366 300 344" fill="none" stroke="#e11d48" stroke-width="6" stroke-linecap="round" opacity=".85"/>
+    <circle cx="396" cy="424" r="10" fill="#e11d48" opacity=".8"/>
+  </g>
+</svg>

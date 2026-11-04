@@ -1,0 +1,24 @@
+# إعدادات عامة لمتجر «لمسة»
+# تعمل مع Apache في XAMPP عند تفعيل AllowOverride
+
+Options -Indexes
+DirectoryIndex index.php
+
+AddDefaultCharset UTF-8
+
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# منع الوصول إلى الملفات الحساسة
+<FilesMatch "(\.(sql|md|log|ini|bak|old|orig|env|dist|sh|zip)$|^composer\.(json|lock)$)">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>

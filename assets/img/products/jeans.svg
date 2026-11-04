@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 750" role="img" aria-label="بنطال جينز بقصة مستقيمة">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f6f8fb"/><stop offset="1" stop-color="#e3eaf3"/>
+    </linearGradient>
+    <linearGradient id="denim" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4a6fa5"/><stop offset="1" stop-color="#26456e"/>
+    </linearGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#16283f" flood-opacity=".24"/>
+    </filter>
+  </defs>
+  <rect width="600" height="750" fill="url(#bg)"/>
+  <circle cx="300" cy="350" r="210" fill="#fff" opacity=".6"/>
+  <circle cx="476" cy="590" r="9" fill="#26456e" opacity=".16"/>
+  <circle cx="126" cy="168" r="6" fill="#26456e" opacity=".2"/>
+  <g filter="url(#soft)">
+    <path d="M232 190 L368 190 L380 270 L366 590 Q336 600 316 590 L300 360 L284 590 Q264 600 234 590 L220 270 Z" fill="url(#denim)"/>
+    <rect x="232" y="190" width="136" height="42" rx="6" fill="#35588100" stroke="#1d3757" stroke-width="0"/>
+    <path d="M232 190 L368 190 L370 228 L230 228 Z" fill="#3a5c88"/>
+    <path d="M232 214 L368 214" stroke="#1d3757" stroke-width="2" opacity=".5"/>
+    <path d="M300 228 L300 352" stroke="#1d3757" stroke-width="2" opacity=".45"/>
+    <path d="M244 330 Q226 460 238 586" fill="none" stroke="#8aa9cd" stroke-width="2.5" opacity=".5" stroke-dasharray="7 9"/>
+    <path d="M356 330 Q374 460 362 586" fill="none" stroke="#8aa9cd" stroke-width="2.5" opacity=".5" stroke-dasharray="7 9"/>
+    <path d="M254 214 Q246 236 250 262" fill="none" stroke="#1d3757" stroke-width="2.5" opacity=".55"/>
+    <path d="M346 214 Q354 236 350 262" fill="none" stroke="#1d3757" stroke-width="2.5" opacity=".55"/>
+    <rect x="312" y="188" width="40" height="26" rx="4" fill="#3a5c88" stroke="#1d3757" stroke-width="2"/>
+  </g>
+  <g fill="#8aa9cd" opacity=".4">
+    <circle cx="238" cy="566" r="2.5"/><circle cx="362" cy="566" r="2.5"/>
+  </g>
+</svg>
