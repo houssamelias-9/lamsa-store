@@ -223,14 +223,37 @@ web1/
 
 ---
 
-## 9. GitHub ونسخة العرض
+## 9. النسخ المتاحة على الإنترنت
+
+| النسخة | الرابط | المزايا |
+|---|---|---|
+| **النسخة الكاملة (PHP + MySQL)** | <https://lamsastore.42web.io/> | كل شيء: تسجيل الدخول، السلة، الدفع، الطلبات، لوحة الإدارة |
+| **لوحة الإدارة** | <https://lamsastore.42web.io/admin/> | إدارة المنتجات والطلبات والإحصائيات |
+| **نسخة العرض الثابتة** | <https://houssamelias-9.github.io/lamsa-store/> | تصفّح الواجهات فقط (GitHub Pages) |
 
 - **المستودع:** <https://github.com/houssamelias-9/lamsa-store>
-- **نسخة العرض على GitHub Pages:** <https://houssamelias-9.github.io/lamsa-store/>
 
-> **مهم:** GitHub Pages تستضيف ملفات ثابتة فقط (HTML/CSS/JS) ولا تشغّل PHP أو MySQL. لذلك نسخة العرض تتيح تصفّح الواجهات فقط، بينما تسجيل الدخول والسلة والدفع ولوحة الإدارة تعمل في النسخة الكاملة على استضافة تدعم PHP.
+> **مهم:** GitHub Pages تستضيف ملفات ثابتة فقط (HTML/CSS/JS) ولا تشغّل PHP أو MySQL. لذلك نسخة العرض تتيح تصفّح الواجهات فقط، بينما النسخة الكاملة على InfinityFree تعمل بقاعدة بيانات MySQL حقيقية.
 
-النسخة الكاملة تعمل محلياً على `http://localhost/web1/`، أو على أي استضافة PHP + MySQL بعد رفع الملفات واستيراد قاعدة البيانات.
+### إعداد الاستضافة (InfinityFree)
+
+- الدومين: `lamsastore.42web.io`
+- مجلد الموقع: `htdocs/`
+- قاعدة البيانات: تُضبط في `config/config.local.php` (مستثنى من Git ولا يُرفع للمستودع).
+
+```php
+<?php
+return [
+    'db_host' => 'sqlXXX.infinityfree.com',
+    'db_port' => '3306',
+    'db_name' => 'if0_XXXXXXXX_lamsa',
+    'db_user' => 'if0_XXXXXXXX',
+    'db_pass' => 'DB_PASSWORD',
+];
+```
+
+> عند غياب `config/config.local.php` يستخدم المشروع إعدادات XAMPP المحلية تلقائياً.
+
 
 ---
 

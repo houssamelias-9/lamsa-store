@@ -12,12 +12,20 @@ define('SHIPPING_FEE', 2.00);
 define('FREE_SHIPPING_FROM', 50.00);
 
 /* بيانات قاعدة البيانات الافتراضية في XAMPP */
-define('DB_HOST', getenv('LAMSA_DB_HOST') ?: '127.0.0.1');
-define('DB_PORT', getenv('LAMSA_DB_PORT') ?: '3306');
-define('DB_NAME', getenv('LAMSA_DB_NAME') ?: 'lamsa_store');
-define('DB_USER', getenv('LAMSA_DB_USER') ?: 'root');
+$lamsaLocalConfig = [];
+if (is_file(__DIR__ . '/config.local.php')) {
+    $lamsaLocalConfig = require __DIR__ . '/config.local.php';
+}
+
+define('DB_HOST', getenv('LAMSA_DB_HOST') ?: ($lamsaLocalConfig['db_host'] ?? '127.0.0.1'));
+define('DB_PORT', getenv('LAMSA_DB_PORT') ?: ($lamsaLocalConfig['db_port'] ?? '3306'));
+define('DB_NAME', getenv('LAMSA_DB_NAME') ?: ($lamsaLocalConfig['db_name'] ?? 'lamsa_store'));
+define('DB_USER', getenv('LAMSA_DB_USER') ?: ($lamsaLocalConfig['db_user'] ?? 'root'));
 $lamsaDbPass = getenv('LAMSA_DB_PASS');
-define('DB_PASS', $lamsaDbPass === false ? '' : $lamsaDbPass);
+if ($lamsaDbPass === false) {
+    $lamsaDbPass = $lamsaLocalConfig['db_pass'] ?? '';
+}
+define('DB_PASS', $lamsaDbPass);
 
 /* ============================================================
    لا تحتاج لتعديل ما بعد هذا السطر

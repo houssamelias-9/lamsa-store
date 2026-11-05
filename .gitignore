@@ -4,6 +4,9 @@
 *.sql
 !database.example.sql
 
+# إعدادات الاستضافة الحقيقية (كلمات مرور قاعدة البيانات)
+/config/config.local.php
+
 # ملفات المستخدمين المرفوعة
 /uploads/products/*
 !/uploads/products/.htaccess
