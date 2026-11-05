@@ -225,8 +225,8 @@ web1/
 
 ## 9. GitHub ونسخة العرض
 
-- **المستودع:** <https://github.com/USERNAME/lamsa-store>
-- **نسخة العرض على GitHub Pages:** <https://USERNAME.github.io/lamsa-store/>
+- **المستودع:** <https://github.com/houssamelias-9/lamsa-store>
+- **نسخة العرض على GitHub Pages:** <https://houssamelias-9.github.io/lamsa-store/>
 
 > **مهم:** GitHub Pages تستضيف ملفات ثابتة فقط (HTML/CSS/JS) ولا تشغّل PHP أو MySQL. لذلك نسخة العرض تتيح تصفّح الواجهات فقط، بينما تسجيل الدخول والسلة والدفع ولوحة الإدارة تعمل في النسخة الكاملة على استضافة تدعم PHP.
 
