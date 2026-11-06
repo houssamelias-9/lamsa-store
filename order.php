@@ -122,7 +122,7 @@ require __DIR__ . '/includes/header.php';
             <?= icon('close') ?>
             <div>
                 <strong>تم إلغاء هذا الطلب</strong>
-                <p>إذا كان لديك استفسار، تواصل معنا على <span dir="ltr">+962 79 000 0000</span>.</p>
+                <p>إذا كان لديك استفسار، تواصل معنا على <span dir="ltr">+961 70 000 000</span>.</p>
             </div>
         </div>
     <?php else: ?>
@@ -233,7 +233,7 @@ require __DIR__ . '/includes/header.php';
             <section class="panel panel--soft">
                 <h2 class="panel-title"><?= icon('phone') ?> تحتاج مساعدة؟</h2>
                 <p class="panel-text">فريقنا جاهز لمساعدتك بخصوص طلبك.</p>
-                <a class="contact-line" href="tel:+962790000000" dir="ltr">+962 79 000 0000</a>
+                <a class="contact-line" href="tel:+96170000000" dir="ltr">+961 70 000 000</a>
                 <a class="contact-line" href="mailto:hello@lamsa.com" dir="ltr">hello@lamsa.com</a>
             </section>
         </aside>

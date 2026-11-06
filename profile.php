@@ -142,7 +142,7 @@ require __DIR__ . '/includes/header.php';
                         <div class="field">
                             <label for="city">المدينة / المحافظة</label>
                             <input id="city" type="text" name="city" value="<?= e(old('city', $me['city'] ?? '')) ?>"
-                                   list="profile-cities" placeholder="مثال: عمّان">
+                                   list="profile-cities" placeholder="مثال: بيروت">
                             <datalist id="profile-cities">
                                 <?php foreach (cities() as $cityName): ?>
                                     <option value="<?= e($cityName) ?>"></option>

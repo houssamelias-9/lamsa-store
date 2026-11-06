@@ -21,7 +21,8 @@ function redirect(string $path): void
 
 function money($amount): string
 {
-    return number_format((float) $amount, 2) . ' <span class="cur">' . e(CURRENCY) . '</span>';
+    $decimals = CURRENCY === 'ل.ل' ? 0 : 2;
+    return number_format((float) $amount, $decimals) . ' <span class="cur">' . e(CURRENCY) . '</span>';
 }
 
 function format_date(?string $date, string $format = 'd/m/Y'): string
@@ -400,7 +401,7 @@ function order_status_class(string $status): string
 function cities(): array
 {
     return [
-        'عمّان', 'إربد', 'الزرقاء', 'العقبة', 'السلط', 'مادبا', 'جرش',
-        'عجلون', 'الكرك', 'معان', 'الطفيلة', 'المفرق',
+        'بيروت', 'جبل لبنان', 'كسروان - جبيل', 'الشمال', 'عكار',
+        'البقاع', 'بعلبك - الهرمل', 'الجنوب', 'النبطية',
     ];
 }

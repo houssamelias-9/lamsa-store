@@ -269,7 +269,7 @@ require __DIR__ . '/includes/header.php';
                     <div class="field">
                         <label for="city">المدينة / المحافظة</label>
                         <input id="city" type="text" name="city" value="<?= e($values['city']) ?>"
-                               list="cities-list" placeholder="مثال: عمّان" autocomplete="address-level2" required>
+                               list="cities-list" placeholder="مثال: بيروت" autocomplete="address-level2" required>
                         <datalist id="cities-list">
                             <?php foreach (cities() as $cityName): ?>
                                 <option value="<?= e($cityName) ?>"></option>
@@ -382,7 +382,7 @@ require __DIR__ . '/includes/header.php';
             <ul class="summary-perks">
                 <li><?= icon('shield') ?> دفع آمن ومشفّر</li>
                 <li><?= icon('refresh') ?> إرجاع مجاني خلال 14 يوماً</li>
-                <li><?= icon('phone') ?> دعم على الرقم <span dir="ltr">+962 79 000 0000</span></li>
+                <li><?= icon('phone') ?> دعم على الرقم <span dir="ltr">+961 70 000 000</span></li>
             </ul>
         </aside>
     </div>

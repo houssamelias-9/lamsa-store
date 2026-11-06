@@ -5,11 +5,11 @@
 
 define('SITE_NAME', 'لمسة');
 define('SITE_TAGLINE', 'أناقة يومية بأسعار تناسبك');
-define('CURRENCY', 'د.أ');
+define('CURRENCY', 'ل.ل');
 
 /* رسوم التوصيل وحد الشحن المجاني */
-define('SHIPPING_FEE', 2.00);
-define('FREE_SHIPPING_FROM', 50.00);
+define('SHIPPING_FEE', 252000);
+define('FREE_SHIPPING_FROM', 6300000);
 
 /* بيانات قاعدة البيانات الافتراضية في XAMPP */
 $lamsaLocalConfig = [];
@@ -31,7 +31,7 @@ define('DB_PASS', $lamsaDbPass);
    لا تحتاج لتعديل ما بعد هذا السطر
    ============================================================ */
 
-date_default_timezone_set('Asia/Amman');
+date_default_timezone_set('Asia/Beirut');
 
 /* إظهار الأخطاء محلياً فقط (مفيد أثناء التطوير على XAMPP) */
 $serverName = $_SERVER['SERVER_NAME'] ?? '';

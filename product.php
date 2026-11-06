@@ -138,8 +138,8 @@ require __DIR__ . '/includes/header.php';
                 <details>
                     <summary>الشحن والإرجاع</summary>
                     <div class="accordion-body">
-                        <p>نوصل لجميع محافظات المملكة خلال 1–3 أيام عمل. الشحن مجاني للطلبات فوق
-                            <?= (int) FREE_SHIPPING_FROM ?> <?= e(CURRENCY) ?>، وإلا تُضاف رسوم
+                        <p>نوصل لجميع المحافظات اللبنانية خلال 1–3 أيام عمل. الشحن مجاني للطلبات فوق
+                            <?= number_format(FREE_SHIPPING_FROM, 0) ?> <?= e(CURRENCY) ?>، وإلا تُضاف رسوم
                             <?= money(SHIPPING_FEE) ?> فقط.</p>
                         <p>يمكنك إرجاع المنتج خلال 14 يوماً بشرط أن يكون بحالته الأصلية وبكامل تغليفه.</p>
                     </div>

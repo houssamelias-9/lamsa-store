@@ -26,8 +26,8 @@ $activeCategory = $activeCategory ?? '';
 
 <div class="topbar">
     <div class="container topbar-inner">
-        <span class="topbar-item"><?= icon('truck') ?> توصيل لجميع المحافظات خلال 1–3 أيام</span>
-        <span class="topbar-item topbar-item--accent"><?= icon('sparkle') ?> شحن مجاني للطلبات فوق <?= (int) FREE_SHIPPING_FROM ?> <?= e(CURRENCY) ?></span>
+        <span class="topbar-item"><?= icon('truck') ?> توصيل لجميع المحافظات اللبنانية خلال 1–3 أيام</span>
+        <span class="topbar-item topbar-item--accent"><?= icon('sparkle') ?> شحن مجاني للطلبات فوق <?= number_format(FREE_SHIPPING_FROM, 0) ?> <?= e(CURRENCY) ?></span>
     </div>
 </div>
 

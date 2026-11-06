@@ -22,6 +22,6 @@
     <div class="auth-aside-foot">
         <span class="auth-stars">★★★★★</span>
         <p>«جودة ممتازة وتوصيل أسرع من المتوقع. صار متجري المفضل!»</p>
-        <small>— سارة، عمّان</small>
+        <small>— سارة، بيروت</small>
     </div>
 </aside>

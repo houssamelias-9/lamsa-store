@@ -45,9 +45,9 @@
                 <div class="footer-col">
                     <h3>تواصل معنا</h3>
                     <ul class="footer-contact">
-                        <li><?= icon('phone') ?> <span dir="ltr">+962 79 000 0000</span></li>
+                        <li><?= icon('phone') ?> <span dir="ltr">+961 70 000 000</span></li>
                         <li><?= icon('mail') ?> <span dir="ltr">hello@lamsa.com</span></li>
-                        <li><?= icon('pin') ?> عمّان، الأردن</li>
+                        <li><?= icon('pin') ?> بيروت، لبنان</li>
                         <li><?= icon('clock') ?> السبت – الخميس، 9 ص – 6 م</li>
                     </ul>
                 </div>
