@@ -5,11 +5,11 @@
 
 define('SITE_NAME', 'لمسة');
 define('SITE_TAGLINE', 'أناقة يومية بأسعار تناسبك');
-define('CURRENCY', 'ل.ل');
+define('CURRENCY', '$');
 
 /* رسوم التوصيل وحد الشحن المجاني */
-define('SHIPPING_FEE', 252000);
-define('FREE_SHIPPING_FROM', 6300000);
+define('SHIPPING_FEE', 2.00);
+define('FREE_SHIPPING_FROM', 50.00);
 
 /* بيانات قاعدة البيانات الافتراضية في XAMPP */
 $lamsaLocalConfig = [];

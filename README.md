@@ -120,7 +120,7 @@ LAMSA_DB_PASS
 
 ```php
 define('SITE_NAME', 'لمسة');
-define('CURRENCY', 'د.أ');
+define('CURRENCY', '$');
 define('SHIPPING_FEE', 2.00);          // رسوم التوصيل
 define('FREE_SHIPPING_FROM', 50.00);   // الشحن مجاني فوق هذا المبلغ
 ```
