@@ -123,7 +123,7 @@ CREATE TABLE `order_items` (
 -- كلمة مرور المدير: Admin@123
 -- كلمة مرور العميل التجريبي: Test@1234
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `phone`, `address`, `city`, `role`) VALUES
-(1, 'مدير المتجر', 'admin@example.com', '$2y$10$6Myrovodrrx1wRVkTLi5FeIjhS/tPgFIehAn0BFUy9TfqWeYYa3CO', '0790000000', 'شارع المدينة المنورة', 'عمّان', 'admin'),
+(1, 'مدير المتجر', 'admin@example.com', '$2y$10$6Myrovodrrx1wRVkTLi5FeIjhS/tPgFIehAn0BFUy9TfqWeYYa3CO', '+961 70 000 000', 'شارع الحمرا، بيروت', 'بيروت', 'admin'),
 (2, 'أحمد العبدالله', 'ahmad@example.com', '$2y$10$2Hi9hzdaEUeBUKQP/b/zH.Z33wYAZld8/E/TcE1iN7I62uad4KtXW', '0781111222', 'شارع الجامعة - بناية 12', 'إربد', 'customer');
 
 INSERT INTO `categories` (`id`, `name`, `slug`, `icon`) VALUES
