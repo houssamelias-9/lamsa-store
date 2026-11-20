@@ -16,6 +16,7 @@ return [
     '1–3 أيام عمل لكل المحافظات' => '1–3 working days to all governorates',
     '50 قطعة' => '50 pieces',
     '8 أحرف على الأقل' => 'At least 8 characters',
+    '<span class="brand-mark">ل</span>' => '<span class="brand-mark">L</span>',
     'JPG · PNG · WEBP · GIF — حتى 3MB' => 'JPG · PNG · WEBP · GIF — up to 3MB',
     'Order Number,Name أو Phone...' => 'Order number, name or phone...',
     'Price: من الأعلى' => 'Price: High to Low',
