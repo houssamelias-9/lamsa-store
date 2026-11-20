@@ -2533,3 +2533,52 @@ ul, ol { padding: 0; list-style: none; }
         scroll-behavior: auto !important;
     }
 }
+
+.lamsa-lang {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    z-index: 999;
+    display: flex;
+    gap: 2px;
+    padding: 3px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    box-shadow: var(--shadow-sm);
+    font-size: 12px;
+    line-height: 1;
+}
+
+.lamsa-lang a {
+    padding: 7px 12px;
+    border-radius: 999px;
+    color: var(--muted);
+    text-decoration: none;
+}
+
+.lamsa-lang a.is-active {
+    background: var(--brand);
+    color: #fff;
+}
+
+[dir="ltr"] .lamsa-lang {
+    right: auto;
+    left: 16px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: -4px 0 14px;
+    font-size: 13px;
+    color: var(--muted);
+    cursor: pointer;
+}
+
+.remember-me input {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--brand);
+}

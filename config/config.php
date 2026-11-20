@@ -3,6 +3,8 @@
    إعدادات المتجر — عدّل من هنا فقط
    ============================================================ */
 
+require_once dirname(__DIR__) . '/includes/i18n.php';
+
 define('SITE_NAME', 'لمسة');
 define('SITE_TAGLINE', 'أناقة يومية بأسعار تناسبك');
 define('CURRENCY', '$');
@@ -55,8 +57,9 @@ define('BASE_URL', rtrim($lamsaBasePath, '/') . '/');
 
 /* الجلسة */
 if (session_status() === PHP_SESSION_NONE) {
+    $lamsaRemember = !empty($_POST['remember']) ? 60 * 60 * 24 * 30 : 0;
     session_set_cookie_params([
-        'lifetime' => 0,
+        'lifetime' => $lamsaRemember,
         'path'     => BASE_URL,
         'httponly' => true,
         'samesite' => 'Lax',

@@ -109,6 +109,8 @@ require __DIR__ . '/includes/header.php';
                     </div>
                 </div>
 
+                <label class="remember-me"><input type="checkbox" name="remember" value="1"> تذكّرني</label>
+
                 <button type="submit" class="btn btn-dark btn-lg btn-block">دخول إلى حسابي</button>
             </form>
 
